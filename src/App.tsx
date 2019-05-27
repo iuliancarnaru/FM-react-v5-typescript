@@ -1,14 +1,14 @@
-//import React, { useState, lazy, Suspense } from "react";
+// import React, { useState, lazy, Suspense } from "react";
 import React, { useState } from "react";
 import { Router } from "@reach/router";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
-import NotFound from "./NotFound";
+// import NotFound from "./NotFound";
 import ThemeContext from "./ThemeContext";
 import NavBar from "./NavBar";
 
-//const Details = lazy(() => import("./Details"));
-//const SearchParams = lazy(() => import("./SearchParams"));
+// const Details = lazy(() => import("./Details"));
+// const SearchParams = lazy(() => import("./SearchParams"));
 // Invariant Violation: ReactDOMServer does not yet support Suspense.
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
           <Router>
             <SearchParams path="/" />
             <Details path="/details/:id" />
-            <NotFound default />
+            {/* <NotFound default /> */}
           </Router>
         </div>
       </ThemeContext.Provider>

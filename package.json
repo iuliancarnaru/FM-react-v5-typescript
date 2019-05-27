@@ -10,7 +10,8 @@
     "lint": "tslint --project",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build --public-url ./dist/ src/index.html",
-    "start": "npm -s run build && babel-node server/index.js"
+    "start": "npm -s run build && babel-node server/index.js",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",

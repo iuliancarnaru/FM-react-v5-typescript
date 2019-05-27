@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
-const NotFound = () => {
+const NotFound: FunctionComponent = () => {
   return (
     <div style={{ textAlign: "center" }}>
       <h1>404 Page not found!</h1>
