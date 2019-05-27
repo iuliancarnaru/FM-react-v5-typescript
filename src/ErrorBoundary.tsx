@@ -1,16 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, ErrorInfo } from "react";
 import { Link, Redirect } from "@reach/router";
 
 class ErrorBoundary extends Component {
-  state = { hasError: false, redirect: false };
-  static getDerivedStateFromError() {
+  public state = { hasError: false, redirect: false };
+  public static getDerivedStateFromError() {
     return { hasError: true };
   }
-  componentDidCatch(error, info) {
+  public componentDidCatch(error: Error, info: ErrorInfo) {
     // eslint-disable-next-line no-console
     console.error("ErrorBoundary caught an error", error, info);
   }
-  componentDidUpdate() {
+  public componentDidUpdate() {
     if (this.state.hasError) {
       setTimeout(() => {
         // or navigate ("/") instead of redirect
@@ -18,7 +18,7 @@ class ErrorBoundary extends Component {
       }, 5000);
     }
   }
-  render() {
+  public render() {
     if (this.state.redirect) {
       return <Redirect to="/" />;
     }
